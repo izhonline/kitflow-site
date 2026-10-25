@@ -1,0 +1,352 @@
+{
+ "generated": "2026-10-25",
+ "brands": [
+  {
+   "name": "Skin + Me",
+   "tags": [
+    "skincare"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "commission",
+     "text": "Ambassador programme: commissions from £10 per sign-up",
+     "url": "https://www.skinandme.com/ambassador"
+    },
+    {
+     "kind": "hire",
+     "text": "hiring an Influencer Team Manager (posted 14 Oct)",
+     "url": "https://apply.workable.com/j/7F7F29B56C"
+    }
+   ]
+  },
+  {
+   "name": "Tangle Teezer",
+   "tags": [
+    "haircare"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Commerce Manager, TikTok Shop (posted 22 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-commerce-manager-tik-tok-shop-tangle-teezer-at-tangle-teezer-ltd-4481237958"
+    }
+   ]
+  },
+  {
+   "name": "Warpaint Cosmetics",
+   "tags": [
+    "makeup"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a TikTok Shop Executive (posted 20 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/tiktok-shop-executive-at-warpaint-cosmetics-4481558151"
+    }
+   ]
+  },
+  {
+   "name": "Sand & Sky",
+   "tags": [
+    "skincare"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "commission",
+     "text": "UK affiliate programme: up to 15%",
+     "url": "https://uk.sandandsky.com/pages/affiliate-program"
+    },
+    {
+     "kind": "hire",
+     "text": "hiring an Influencer Marketing Manager (posted 21 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/influencer-marketing-manager-at-sand-sky-4478967961"
+    }
+   ]
+  },
+  {
+   "name": "Revolution Beauty",
+   "tags": [
+    "haircare",
+    "makeup",
+    "skincare"
+   ],
+   "min_followers": 1000,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "programme",
+     "text": "Revolution Generation creator programme",
+     "url": "https://www.revolutionbeauty.com/pages/revolution-generation"
+    }
+   ]
+  },
+  {
+   "name": "The Beauty Crop",
+   "tags": [
+    "makeup"
+   ],
+   "min_followers": 1000,
+   "pays_via": [
+    "awin",
+    "shopify collabs"
+   ],
+   "evidence": [
+    {
+     "kind": "commission",
+     "text": "Affiliate programme: 15%, more at 4+ posts a month",
+     "url": "https://thebeautycrop.com/pages/affiliate"
+    }
+   ]
+  },
+  {
+   "name": "Glow Hub",
+   "tags": [
+    "skincare"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "programme",
+     "text": "GH Creator Community: free products monthly, commission",
+     "url": "https://glowhub.com/pages/gh-creator-community"
+    }
+   ]
+  },
+  {
+   "name": "Trinny London",
+   "tags": [
+    "fashion",
+    "makeup",
+    "skincare"
+   ],
+   "min_followers": 0,
+   "pays_via": [
+    "ltk",
+    "shopmy"
+   ],
+   "evidence": [
+    {
+     "kind": "commission",
+     "text": "Affiliate programme: up to 20% via LTK or ShopMy",
+     "url": "https://trinnylondon.com/pages/affiliate-program"
+    }
+   ]
+  },
+  {
+   "name": "P.Louise",
+   "tags": [
+    "makeup"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "programme",
+     "text": "The Social Society creator commission programme",
+     "url": "https://www.plouise.co.uk/pages/collab"
+    }
+   ]
+  },
+  {
+   "name": "CurrentBody",
+   "tags": [
+    "devices",
+    "haircare",
+    "skincare"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring an Influencer Marketing Executive (posted 15 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/influencer-marketing-executive-at-the-beauty-tech-group-currentbody-ziip-tria-4479118483"
+    }
+   ]
+  },
+  {
+   "name": "The Perfume Shop",
+   "tags": [
+    "fragrance"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Media & Influencer Manager (posted 20 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-media-influencer-manager-at-the-perfume-shop-4464358799"
+    }
+   ]
+  },
+  {
+   "name": "Treats",
+   "tags": [
+    "fashion",
+    "jewellery",
+    "kids",
+    "lifestyle"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Media and Influencer Manager (posted 22 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-media-and-influencer-manager-at-treats-4482450802"
+    }
+   ]
+  },
+  {
+   "name": "MARCHON",
+   "tags": [
+    "eyewear",
+    "fashion"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Media & Creator Partnerships Manager (posted 22 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-media-creator-partnerships-manager-at-marchon-4480030323"
+    }
+   ]
+  },
+  {
+   "name": "Superdry",
+   "tags": [
+    "events",
+    "fashion"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Creator Marketing & Talent Manager (posted 23 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/creator-marketing-talent-manager-at-superdry-4472957072"
+    },
+    {
+     "kind": "hire",
+     "text": "hiring an Affiliates & Social Media Manager (posted 23 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/affiliates-social-media-manager-at-superdry-4472939850"
+    }
+   ]
+  },
+  {
+   "name": "Simmer",
+   "tags": [
+    "fitness",
+    "food",
+    "wellness"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "ads",
+     "text": "7+ active creator partnership ads (Meta Ad Library, UK)",
+     "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=GB&q=Simmer&search_type=keyword_unordered"
+    },
+    {
+     "kind": "hire",
+     "text": "hiring an Influencer & Partnerships Manager (posted 21 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/influencer-partnerships-manager-at-simmer-4479412428"
+    }
+   ]
+  },
+  {
+   "name": "SharkNinja",
+   "tags": [
+    "cleaning",
+    "devices",
+    "food",
+    "haircare",
+    "home"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Creator Programme Manager UKI (posted 17 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/creator-programme-manager-uki-at-sharkninja-4472095160"
+    }
+   ]
+  },
+  {
+   "name": "THG Nutrition",
+   "tags": [
+    "fitness",
+    "food"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring an EU Influencer Manager - THG Nutrition | Myprotein (posted 22 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/eu-influencer-manager-thg-nutrition-myprotein-at-thg-4465317439"
+    }
+   ]
+  },
+  {
+   "name": "Plank Hardware",
+   "tags": [
+    "home"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Media & Influencer Manager (posted 21 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-media-influencer-manager-at-plank-hardware-b-corp-certified-4482051971"
+    }
+   ]
+  },
+  {
+   "name": "Canon EMEA",
+   "tags": [
+    "devices",
+    "events",
+    "travel"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Media Content Creator Programme Specialist (posted 23 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-media-content-creator-programme-specialist-at-canon-emea-4465050339"
+    }
+   ]
+  },
+  {
+   "name": "Cranberry Panda",
+   "tags": [
+    "fashion",
+    "fitness"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Media & Influencer Manager | Sports Retail (posted 19 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-media-influencer-manager-sports-retail-at-cranberry-panda-4478282501"
+    }
+   ]
+  }
+ ]
+}

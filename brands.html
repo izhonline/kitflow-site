@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kitflow: your brand matches</title>
+<meta name="description" content="Tell us your niche and follower count. See UK brands with dated, public proof that they're paying creators right now.">
+<style>
+  :root {
+    --bg: #faf8f5; --ink: #1d1b19; --muted: #6b655e; --line: #e6e0d8;
+    --card: #ffffff; --accent: #b4532a; --accent-ink: #ffffff; --chip: #f1ece5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161412; --ink: #f2eee9; --muted: #a59d94; --line: #2e2a26; --card: #1f1c19; --accent: #e07a4b; --accent-ink: #161412; --chip: #2a2622; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  header a.contact { color: var(--muted); text-decoration: none; font-size: 15px; }
+  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 12px; }
+  .lede { font-size: 18px; color: var(--muted); margin: 0 0 28px; max-width: 600px; }
+  form { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 18px; }
+  label, legend { font-weight: 600; font-size: 15px; display: block; margin-bottom: 6px; padding: 0; }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .hint { font-weight: 400; color: var(--muted); }
+  input[type=text], input[type=number] { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  input:focus-visible, .chips label:focus-within, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips label { display: inline-flex; align-items: center; margin: 0; font-weight: 500; font-size: 15px; background: var(--chip); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; user-select: none; }
+  .chips input { position: absolute; opacity: 0; pointer-events: none; }
+  .chips label:has(input:checked) { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  button { font: inherit; font-weight: 600; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 10px; padding: 12px 18px; cursor: pointer; justify-self: start; }
+  .error { color: var(--accent); font-size: 15px; margin: 0; }
+  #results { margin-top: 36px; }
+  #results h2 { font-size: 22px; letter-spacing: -0.01em; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 15px; margin: 0 0 18px; }
+  .match { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+  .match h3 { margin: 0 0 6px; font-size: 18px; }
+  .match ul { margin: 0 0 10px; padding-left: 20px; }
+  .match li { margin: 4px 0; }
+  .why { font-size: 14px; color: var(--muted); margin: 0; }
+  .more { border: 1px dashed var(--line); border-radius: 14px; padding: 20px; margin-top: 16px; }
+  .more p { margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 12px 18px; border-radius: 10px; }
+  .small { font-size: 14px; color: var(--muted); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="logo" href="./">Kit<span>flow</span></a>
+    <a class="contact" href="mailto:isaacson.harold@gmail.com">Contact</a>
+  </header>
+
+  <h1>Which UK brands are paying creators like you?</h1>
+  <p class="lede">Pick your niches and follower count. You'll see brands with dated, public proof that they're paying creators right now, such as a creator-team job post or a live creator programme.</p>
+
+  <form id="f" novalidate>
+    <div class="row">
+      <div>
+        <label for="h">Your handle <span class="hint">(optional)</span></label>
+        <input id="h" name="h" type="text" placeholder="@yourname" autocomplete="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div>
+        <label for="followers">Followers on your main platform</label>
+        <input id="followers" name="f" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g. 2400" required>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Your niches <span class="hint">(pick all that fit)</span></legend>
+      <div class="chips" id="niches"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Platforms you already earn through <span class="hint">(optional)</span></legend>
+      <div class="chips" id="uses"></div>
+    </fieldset>
+    <p class="error" id="err" hidden></p>
+    <button type="submit">Show my brands</button>
+  </form>
+
+  <section id="results" aria-live="polite" hidden></section>
+
+  <footer>
+    <p id="checked">Loading brands…</p>
+    <p>Every match links to its public source. A job post means the brand is hiring for its creator team, not that it has picked anyone yet. Your answers stay in your browser and aren't sent anywhere.</p>
+  </footer>
+</main>
+
+<script src="match.js"></script>
+<script>
+const FREE = 3;
+const WEEKLY = "https://buy.stripe.com/4gM00i40Cgwu0PhbXyd3i01";
+const PLATFORMS = { "ltk": "LTK", "shopmy": "ShopMy", "awin": "Awin", "shopify collabs": "Shopify Collabs" };
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const label = t => t.charAt(0).toUpperCase() + t.slice(1);
+
+function chips(el, name, values, names) {
+  el.innerHTML = values.map(v =>
+    `<label><input type="checkbox" name="${name}" value="${esc(v)}">${esc(names ? names[v] : label(v))}</label>`).join("");
+}
+
+function picked(name) {
+  return [...document.querySelectorAll(`input[name="${name}"]:checked`)].map(i => i.value);
+}
+
+const and = xs => xs.length < 2 ? xs.join("") : xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1];
+
+function why(m) {
+  let s = `Fits your ${and(m.shared)} content.`;
+  if (m.platforms.length) s += ` Pays through ${and(m.platforms.map(p => PLATFORMS[p] || p))}, which you already use.`;
+  return s;
+}
+
+function render(site, handle, matches) {
+  const r = $("results");
+  const who = handle ? `@${esc(handle)}` : "you";
+  if (!matches.length) {
+    r.innerHTML = `<h2>No matches for ${who} this week</h2>
+      <p class="sub">None of the brands with fresh proof fit those niches and follower count. Try adding a niche you also post about, or check back next week: the list is re-checked weekly.</p>`;
+  } else {
+    const shown = matches.slice(0, FREE), rest = matches.length - shown.length;
+    r.innerHTML = `<h2>${matches.length} brand${matches.length === 1 ? "" : "s"} for ${who}</h2>
+      <p class="sub">Best fit first. List updated ${esc(site.when)}.</p>` +
+      shown.map(m => `<article class="match">
+        <h3>${esc(m.name)}</h3>
+        <ul>${m.evidence.map(e => `<li>${esc(e.text.charAt(0).toUpperCase() + e.text.slice(1))}. <a href="${esc(e.url)}" target="_blank" rel="noopener">Source</a></li>`).join("")}</ul>
+        <p class="why">${esc(why(m))}</p>
+      </article>`).join("") +
+      (rest > 0 ? `<div class="more">
+        <p><strong>${rest} more brand${rest === 1 ? "" : "s"} match${rest === 1 ? "es" : ""} you.</strong> The weekly list sends every match, re-checked, each week, with contact routes and pitch angles.</p>
+        <a class="btn" href="${WEEKLY}">Get the weekly list, £12/month</a>
+      </div>` : "");
+  }
+  r.hidden = false;
+  r.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function run(site) {
+  const handle = $("h").value.trim().replace(/^@/, "");
+  const followers = parseInt($("followers").value, 10);
+  const niches = picked("n"), uses = picked("u");
+  const err = !Number.isFinite(followers) || followers < 0 ? "Enter your follower count."
+    : !niches.length ? "Pick at least one niche." : "";
+  $("err").textContent = err;
+  $("err").hidden = !err;
+  if (err) return;
+
+  const q = new URLSearchParams();
+  if (handle) q.set("h", handle);
+  q.set("f", followers);
+  q.set("n", niches.join(","));
+  if (uses.length) q.set("u", uses.join(","));
+  history.replaceState(null, "", "?" + q.toString());
+
+  render(site, handle, match({ followers, niches, uses }, site.brands, Infinity));
+}
+
+fetch("brands.json").then(r => r.json()).then(data => {
+  const site = { ...data, when: new Date(data.generated + "T00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) };
+  const tags = [...new Set(data.brands.flatMap(b => b.tags))].sort();
+  chips($("niches"), "n", tags);
+  chips($("uses"), "u", Object.keys(PLATFORMS), PLATFORMS);
+  $("checked").textContent = `${data.brands.length} brands with proof from the last 14 days. List updated ${site.when}.`;
+
+  const q = new URLSearchParams(location.search);
+  if (q.get("h")) $("h").value = q.get("h");
+  if (q.get("f")) $("followers").value = q.get("f");
+  for (const [name, key] of [["n", "n"], ["u", "u"]])
+    for (const v of (q.get(key) || "").split(",").filter(Boolean)) {
+      const box = document.querySelector(`input[name="${name}"][value="${CSS.escape(v)}"]`);
+      if (box) box.checked = true;
+    }
+  $("f").addEventListener("submit", e => { e.preventDefault(); run(site); });
+  if (q.get("f") && q.get("n")) run(site);
+}).catch(() => { $("checked").textContent = "Couldn't load the brand list. Refresh to try again."; });
+</script>
+</body>
+</html>
