@@ -8,10 +8,22 @@ function match(creator, brands, limit) {
     const platforms = b.pays_via.filter(p => uses.has(p)).sort();
     const reasons = shared.map(n => `niche: ${n}`)
       .concat(platforms.map(p => `pays via ${p}, which you already use`));
-    const score = shared.length + 2 * platforms.length + 0.5 * b.evidence.length;
+    // Niche fit is the share of the brand's focus the creator covers, so a specialist beats a broad retailer.
+    const score = 2 * shared.length / b.tags.length + 2 * platforms.length + 0.5 * Math.min(b.evidence.length, 3);
     out.push({ name: b.name, score, reasons, shared, platforms, evidence: b.evidence });
   }
   return out.sort((a, b) => b.score - a.score).slice(0, limit);
 }
 
-if (typeof module !== "undefined") module.exports = { match };
+// Brands hand-picked for a creator (named in a reply link) go first, even without a niche match.
+function pin(matches, brands, names) {
+  const picked = [];
+  for (const name of names) {
+    const b = matches.find(m => m.name === name) || brands.find(b => b.name === name && b.evidence.length);
+    if (b && !picked.some(p => p.name === name))
+      picked.push({ shared: [], platforms: [], reasons: [], ...b, picked: true });
+  }
+  return picked.concat(matches.filter(m => !names.includes(m.name)));
+}
+
+if (typeof module !== "undefined") module.exports = { match, pin };

@@ -189,6 +189,41 @@
    ]
   },
   {
+   "name": "L'Oréal Color Wow",
+   "tags": [
+    "haircare"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring an Advocacy & Influence Lead - Color Wow - Professional Products Division (posted 20 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/advocacy-influence-lead-color-wow-professional-products-division-at-l-or%C3%A9al-4472824599"
+    }
+   ]
+  },
+  {
+   "name": "Boots UK",
+   "tags": [
+    "baby",
+    "fragrance",
+    "haircare",
+    "makeup",
+    "skincare",
+    "wellness"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Social Commerce Content Specialist (posted 22 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/social-commerce-content-specialist-at-boots-uk-4482706995"
+    }
+   ]
+  },
+  {
    "name": "Treats",
    "tags": [
     "fashion",
@@ -285,6 +320,22 @@
    ]
   },
   {
+   "name": "Bulk",
+   "tags": [
+    "fitness",
+    "food"
+   ],
+   "min_followers": 0,
+   "pays_via": [],
+   "evidence": [
+    {
+     "kind": "hire",
+     "text": "hiring a Head of Brand Partnerships, PR and Community (posted 21 Oct)",
+     "url": "https://uk.linkedin.com/jobs/view/head-of-brand-partnerships-pr-and-community-at-bulk%E2%84%A2-4481154477"
+    }
+   ]
+  },
+  {
    "name": "THG Nutrition",
    "tags": [
     "fitness",
@@ -318,9 +369,7 @@
   {
    "name": "Canon EMEA",
    "tags": [
-    "devices",
-    "events",
-    "travel"
+    "photography"
    ],
    "min_followers": 0,
    "pays_via": [],

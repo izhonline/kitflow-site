@@ -114,7 +114,8 @@ function picked(name) {
 const and = xs => xs.length < 2 ? xs.join("") : xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1];
 
 function why(m) {
-  let s = `Fits your ${and(m.shared)} content.`;
+  if (m.picked && !m.shared.length) return "Picked for you by hand.";
+  let s = (m.picked ? "Picked for you. " : "") + `Fits your ${and(m.shared)} content.`;
   if (m.platforms.length) s += ` Pays through ${and(m.platforms.map(p => PLATFORMS[p] || p))}, which you already use.`;
   return s;
 }
@@ -126,7 +127,8 @@ function render(site, handle, matches) {
     r.innerHTML = `<h2>No matches for ${who} this week</h2>
       <p class="sub">None of the brands with fresh proof fit those niches and follower count. Try adding a niche you also post about, or check back next week: the list is re-checked weekly.</p>`;
   } else {
-    const shown = matches.slice(0, FREE), rest = matches.length - shown.length;
+    const free = Math.max(FREE, matches.filter(m => m.picked).length);
+    const shown = matches.slice(0, free), rest = matches.length - shown.length;
     r.innerHTML = `<h2>${matches.length} brand${matches.length === 1 ? "" : "s"} for ${who}</h2>
       <p class="sub">Best fit first. List updated ${esc(site.when)}.</p>` +
       shown.map(m => `<article class="match">
@@ -158,9 +160,10 @@ function run(site) {
   q.set("f", followers);
   q.set("n", niches.join(","));
   if (uses.length) q.set("u", uses.join(","));
+  if (site.picks.length) q.set("b", site.picks.join("|"));
   history.replaceState(null, "", "?" + q.toString());
 
-  render(site, handle, match({ followers, niches, uses }, site.brands, Infinity));
+  render(site, handle, pin(match({ followers, niches, uses }, site.brands, Infinity), site.brands, site.picks));
 }
 
 fetch("brands.json").then(r => r.json()).then(data => {
@@ -171,6 +174,7 @@ fetch("brands.json").then(r => r.json()).then(data => {
   $("checked").textContent = `${data.brands.length} brands with proof from the last 14 days. List updated ${site.when}.`;
 
   const q = new URLSearchParams(location.search);
+  site.picks = (q.get("b") || "").split("|").filter(Boolean);
   if (q.get("h")) $("h").value = q.get("h");
   if (q.get("f")) $("followers").value = q.get("f");
   for (const [name, key] of [["n", "n"], ["u", "u"]])
